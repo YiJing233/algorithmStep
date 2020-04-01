@@ -54,13 +54,12 @@ def MergeSort(nums:list):
         i = 0
         j = 0
         while(i < len(left) and j < len(right)):
-            if left[i] <= riht[i]:
+            if left[i] <= right[i]:
                 res.append(left[i])
                 i += 1
             else:
                 res.append(right[i])
                 j += 1
-        
         res += left[i:]
         res += right[j:]
         return res
@@ -202,3 +201,8 @@ def Radix_sort(nums):
 # 稳定外排序，时间复杂度 posCount∗(n+n)
 # 其中 posCount 为数组中最大元素的最高位数
 # 简化下得：O(k*n)；其中k为常数，n为元素个数。
+
+
+# nums = [4,3,2,6,5,6,2,7,5,8,4]
+
+# print(quickSort(nums))
