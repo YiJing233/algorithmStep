@@ -1,4 +1,5 @@
 #include<iostream>
+#include<bits/stdc++.h>
 #include<stack>
 using namespace std;
 stack<int> a;
