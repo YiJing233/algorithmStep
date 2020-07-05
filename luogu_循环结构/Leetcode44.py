@@ -24,4 +24,4 @@ class Solution:
                 elif p[m-1] == "?" or p[m-1]==s[n-1]: #先判断字母是否符合
                     table[m][n] = table[m-1][n-1] #再看左上方格子是不是T
                         
-        return table[zong-1][heng-1
+        return table[zong-1][heng-1]
