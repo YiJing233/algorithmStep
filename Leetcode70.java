@@ -23,6 +23,7 @@
 // 2.  1 阶 + 2 阶
 // 3.  2 阶 + 1 阶
 
+// 解法一 动态规划
 class Solution {
     public int climbStairs(int n) {
         if(n<=2)    return n;
@@ -34,5 +35,15 @@ class Solution {
             i2 = temp;
         }
         return i2;
+    }
+}
+
+// 解法二 通项公式
+
+public class Solution {
+    public int climbStairs(int n) {
+        double sqrt5 = Math.sqrt(5);
+        double fibn = Math.pow((1 + sqrt5) / 2, n + 1) - Math.pow((1 - sqrt5) / 2, n + 1);
+        return (int)(fibn / sqrt5);
     }
 }

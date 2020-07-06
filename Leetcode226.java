@@ -1,5 +1,3 @@
-package luogu_循环结构;
-
 public class Leetcode226 {
  /**
  * Definition for a binary tree node.
