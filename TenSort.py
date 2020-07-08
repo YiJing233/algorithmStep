@@ -93,7 +93,7 @@ def quickSort(nums:list):
 def heapSort(nums:list):
     n = len(nums)
 
-    def adjust_heap_recur(nums,startpos,endpos):
+    def adjust_heap_recur(nums, startpos, endpos):
         pos = startpos
         childpos = pos * 2 +1
         if childpos < endpos:
