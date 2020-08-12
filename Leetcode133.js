@@ -93,5 +93,4 @@ var cloneGraph = function(startNode) {
     }
   }
   return clonedStartNode;
-
 };
