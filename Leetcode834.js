@@ -30,9 +30,9 @@
  */
 
  const sumOfDistancesInTree = (N, edges)=>{
-     const gargh = new Array(N);
-     for (let i = 0; i < gargh.length; i++) {
-         gargh[i] = [];
+     const gragh = new Array(N);
+     for (let i = 0; i < gragh.length; i++) {
+         gragh[i] = [];
      }
      for (const edge of edges) {
          const [from, to] = edge;
