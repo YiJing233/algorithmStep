@@ -51,6 +51,7 @@ var getMinimumDifference = function(root) {
             pre = root.val
         } else {
             ans = Math.min(ans, root.val - pre);
+            pre = root.val
         }
         dfs(root.right);
     }
