@@ -23,7 +23,7 @@
 //   "...Q",
 //   ".Q.."]
 // ]
- 
+
 
 // 提示：
 
@@ -33,13 +33,13 @@
  * @param {number} n
  * @return {number}
  */
-var totalNQueens = function(n) {
+var totalNQueens = function (n) {
     let res = 0;
     let arr = [];
     for (let i = 0; i < n; i++) {
         arr.push(new Array(n).fill("."));
     }
-    const isValid = (row, col)=>{
+    const isValid = (row, col) => {
         // 同行、同列
         for (let a = 0; a < n; a++) {
             if (arr[row][a] == "Q" || arr[a][col] == "Q") {
@@ -47,20 +47,20 @@ var totalNQueens = function(n) {
             }
         }
         // 左上
-        for (let a = row - 1, b = col - 1; a >= 0 && b >= 0; a--,b--) {
+        for (let a = row - 1, b = col - 1; a >= 0 && b >= 0; a--, b--) {
             if (arr[a][b] == "Q") {
-                return false;
+                return false
             }
         }
         // 右上
-        for (let a = row - 1, b = col + 1; a >= 0 && b < n; a--,b++) {
+        for (let a = row - 1, b = col + 1; a >= 0 && b < n; a--, b++) {
             if (arr[a][b] == "Q") {
                 return false;
             }
         }
         return true;
     }
-    const dfs = (board, n, row)=>{
+    const dfs = (board, n, row) => {
         if (row == n) {
             res++;
             return;
@@ -68,8 +68,8 @@ var totalNQueens = function(n) {
             for (let i = 0; i < n; i++) {
                 if (isValid(row, i)) {
                     board[row][i] = "Q";
-                    dfs(board, n, row+1);
-                    board[row][i] = ".";                    
+                    dfs(board, n, row + 1);
+                    board[row][i] = ".";
                 }
             }
         }
